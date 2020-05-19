@@ -1,8 +1,9 @@
-import { Component, OnInit, OnDestroy } from "@angular/core";
+import { Component, OnInit, OnDestroy, ChangeDetectorRef } from "@angular/core";
 import {Router} from '@angular/router';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {AbstractControl, FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {MustMatch} from '../../forms/validation-forms/password-validator.component';
 import {AuthService} from '../../../core/auth/service/auth.service';
+import {ToastrService} from 'ngx-toastr';
 
 @Component({
   selector: "app-register",
@@ -18,12 +19,14 @@ export class RegisterComponent implements OnInit, OnDestroy {
   constructor(
       private formBuilder: FormBuilder,
       private _router: Router,
-      private userService: AuthService
+      private userService: AuthService,
+      private toastr: ToastrService
   ) {}
 
   register: FormGroup;
   loading = false;
   submitted = false;
+  err_msg = '';
 
   ngOnInit() {
     var $page = document.getElementsByClassName("full-page")[0];
@@ -50,9 +53,37 @@ export class RegisterComponent implements OnInit, OnDestroy {
     if (this.register.invalid) {
       return;
     }
-    console.log(this.register.value);
     this.userService.register(this.register.value)
-
+        .subscribe(res => {
+            if (res['success'] === false) {
+                this.toastr.info(
+                    '<span class="now-ui-icons ui-1_bell-53"></span> ' + res['msg'],
+                    "",
+                    {
+                        timeOut: 8000,
+                        closeButton: true,
+                        enableHtml: true,
+                        toastClass: "alert alert-warning alert-with-icon",
+                        positionClass: "toast-top-right"
+                    }
+                );
+            }
+            else {
+                this.toastr.info(
+                    '<span class="now-ui-icons ui-1_bell-53"></span> ' + res['msg'],
+                    "",
+                    {
+                        timeOut: 8000,
+                        closeButton: true,
+                        enableHtml: true,
+                        toastClass: "alert alert-success alert-with-icon",
+                        positionClass: "toast-top-right"
+                    }
+                );
+                this._router.navigate(['pages/emailVerify'])
+            }
+        });
+      this.loading = false
   }
 
   ngOnDestroy() {

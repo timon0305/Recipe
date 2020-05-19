@@ -3,6 +3,8 @@
     height: 85px;
     filter: invert(1);
     margin-bottom: 20px;
+    border: 2px solid #2ba594;
+    border-radius: 50%;
 }
 .user-login .social {
     display: flex;
@@ -13,11 +15,21 @@
 }
 .user-login .card-body p>a {
     cursor: pointer;
-    color: #f96332;;
+    color: #f96332;
 }
-.user-login .card-footer .pull-left>h6>a {
+.user-login .card-footer .pull-left {
+    width: 100%;
+}
+.user-login .card-footer .pull-left>p {
+    font-size: 11px;
+}
+.user-login .card-footer .pull-left>p>a {
     cursor: pointer;
+    color: #f96332;
+    font-size: 11px;
 }
-.user-login .card-footer {
-    margin-top: 24px;
+
+.input-group > .form-control:not(:last-child), .input-group > .custom-select:not(:last-child) {
+    border-top-right-radius: 29px!important;
+    border-bottom-right-radius: 29px!important;
 }

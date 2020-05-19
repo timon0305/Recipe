@@ -147,32 +147,35 @@
 
                   />
 
-                    <label for="acceptTerms" class="form-check-sign"> I agree to the
-                    <a href="#something">terms and conditions</a>.</label>
+                    <label for="acceptTerms" class="form-check-sign"> I agree to the <a href="#something">VitualChoppingBoard User Agreement</a> and
+                    <a href="#something">Privacy Policy</a>.</label>
                   <div *ngIf="submitted && f.acceptTerms.errors" class="invalid-feedback">Accepts Ts & Cs is required</div>
                 </div>
             </div>
-            <div class="social">
-              <div>
-                <button class="btn btn-icon btn-round btn-facebook">
-                  <i class="fab fa-facebook-f"></i>
-                </button>
-              </div>
-              <div>
-                <button class="btn btn-icon btn-round btn-google">
-                  <i class="fab fa-google"></i>
-                </button>
-              </div>
-            </div>
+
             <div class="card-footer ">
               <button href="#pablo" class="btn btn-primary btn-round btn-lg btn-block mb-3" type="submit">Register</button>
+              <p>----------&nbsp; Or join with &nbsp; -----------</p>
+              <div class="social">
+                <div>
+                  <button class="btn btn-icon btn-round btn-facebook">
+                    <i class="fab fa-facebook-f"></i>
+                  </button>
+                </div>
+                <div>
+                  <button class="btn btn-icon btn-round btn-google">
+                    <i class="fab fa-google"></i>
+                  </button>
+                </div>
+              </div>
+              <br>
               <div class="pull-left">
-                <h6>
-                  <a (click)="user_login()" class="link footer-link">Already have an account? Login here</a>
-                </h6>
+                <p>Already have an account? &nbsp;
+                  <a (click)="user_login()" class="link footer-link">Login here</a>
+                </p>
               </div>
               <div class="pull-right">
-            </div>
+              </div>
           </div>
           </form>
         </div>

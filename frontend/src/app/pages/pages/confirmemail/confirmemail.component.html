@@ -1,0 +1,41 @@
+<div class="main-content confirm-email">
+    <div class="container">
+        <div class="col-md-4 ml-auto mr-auto">
+            <form [formGroup]="emailConfirm" (ngSubmit)="onSubmit()">
+                <div class="card card-lock text-center">
+                    <div class="card-header ">
+                        <img src="assets/img/now-logo.png" alt="..." />
+                    </div>
+                    <div class="card-body ">
+                        <h4 class="card-title">Forgot Password ?</h4>
+                        <p>Enter the email address you used to create your account here. We will then send you the instructions to reset your password.</p>
+                        <div class="form-group">
+                            <input
+                                    type="email"
+                                    class="form-control"
+                                    placeholder="Enter Your Email.."
+                                    formControlName="userEmail"
+                                    [ngClass]="{'is-invalid': submitted && f.userEmail.errors}"
+                            />
+                            <div *ngIf="submitted && f.userEmail.errors" class="invalid-feedback">
+                                <div *ngIf="f.userEmail.errors.required">Email is required</div>
+                                <div *ngIf="f.userEmail.errors.email">Email must be a valid email address</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer ">
+                        <button type="submit" href="#pablo" class="btn btn-primary btn-round btn-lg">Submit Reset</button>
+                        <br><br>
+                        <div class="pull-left">
+                            <p>Cancel and
+                                <a (click)="user_login()" class="link footer-link">Go Back</a>
+                            </p>
+                        </div>
+                        <div class="pull-right">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

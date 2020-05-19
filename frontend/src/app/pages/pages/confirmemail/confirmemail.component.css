@@ -1,0 +1,12 @@
+.confirm-email .card-header>img {
+    filter: invert(1);
+    border: 2px solid #f96332;
+}
+.confirm-email .card-footer .pull-left {
+    text-align: center;
+    width: 100%;
+}
+.confirm-email .card-footer .pull-left a {
+    color: #f96332;
+    cursor: pointer;
+}

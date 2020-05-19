@@ -7,6 +7,10 @@ import { RegisterComponent } from "./register/register.component";
 import { PricingComponent } from "./pricing/pricing.component";
 import { PagesRoutes } from "./pages.routing";
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { EmailverifyComponent } from './emailverify/emailverify.component';
+import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
+import { ConfirmemailComponent } from './confirmemail/confirmemail.component';
+import { ConfirmcodeComponent } from './confirmcode/confirmcode.component';
 
 @NgModule({
   imports: [
@@ -19,7 +23,11 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     LoginComponent,
     LockComponent,
     RegisterComponent,
-    PricingComponent
+    PricingComponent,
+    EmailverifyComponent,
+    ResetpasswordComponent,
+    ConfirmemailComponent,
+    ConfirmcodeComponent
   ]
 })
 export class PagesModule {}

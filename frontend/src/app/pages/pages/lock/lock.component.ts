@@ -13,7 +13,7 @@ export class LockComponent implements OnInit, OnDestroy {
     var image_src;
     var image_container = document.createElement("div");
     image_container.classList.add("full-page-background");
-    image_container.style.backgroundImage = "url(assets/img/bg13.jpg)";
+    // image_container.style.backgroundImage = "url(assets/img/bg13.jpg)";
     $page.appendChild(image_container);
     $page.classList.add("lock-page");
   }

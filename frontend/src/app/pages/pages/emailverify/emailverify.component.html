@@ -1,0 +1,31 @@
+<div class="main-content email_verify">
+    <div class="container">
+        <div class="col-md-4 ml-auto mr-auto">
+            <form [formGroup]="emailVerify" (ngSubmit)="onSubmit()">
+                <div class="card card-lock text-center">
+                    <div class="card-header ">
+                        <img src="assets/img/now-logo.png" alt="..." />
+                    </div>
+                    <div class="card-body ">
+                        <h4 class="card-title">Verify Code</h4>
+                        <div class="form-group">
+                            <input
+                                    type="password"
+                                    class="form-control"
+                                    placeholder="Enter Verify Code.."
+                                    formControlName="code"
+                                    [ngClass]="{'is-invalid': submitted && f.code.errors}"
+                            />
+                            <div *ngIf="submitted && f.code.errors" class="invalid-feedback">
+                                <div *ngIf="f.code.errors.required">Code is required</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer ">
+                        <button type="submit" href="#pablo" class="btn btn-primary btn-round btn-lg">Confirm</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
