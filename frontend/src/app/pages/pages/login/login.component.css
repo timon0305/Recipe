@@ -1,0 +1,23 @@
+.user-login .logo-container>img {
+    width: 83px;
+    height: 85px;
+    filter: invert(1);
+    margin-bottom: 20px;
+}
+.user-login .social {
+    display: flex;
+    justify-content: space-around;
+}
+.user-login .card-body p {
+    text-align: right;
+}
+.user-login .card-body p>a {
+    cursor: pointer;
+    color: #f96332;;
+}
+.user-login .card-footer .pull-left>h6>a {
+    cursor: pointer;
+}
+.user-login .card-footer {
+    margin-top: 24px;
+}
