@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from "@angular/core";
-import {Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {AuthService} from '../../../core/auth/service/auth.service';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {first} from 'rxjs/operators';
@@ -13,11 +13,13 @@ import {ToastrService} from 'ngx-toastr';
 export class LoginComponent implements OnInit, OnDestroy {
   private focus;
   private focus2;
+    returnUrl: string;
   constructor(
       private _router: Router,
+      private route: ActivatedRoute,
       private userService: AuthService,
       private formBuilder: FormBuilder,
-      private toastr: ToastrService
+      private toastr: ToastrService,
   ) {}
 
   login: FormGroup;
@@ -26,6 +28,7 @@ export class LoginComponent implements OnInit, OnDestroy {
 
 
   ngOnInit() {
+      this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/app';
     var $page = document.getElementsByClassName("full-page")[0];
     var image_src;
     var image_container = document.createElement("div");
@@ -49,7 +52,6 @@ export class LoginComponent implements OnInit, OnDestroy {
       this.userService.login(this.login.value)
           .pipe(first())
           .subscribe(res => {
-            console.log(res)
             if (res['success'] === true)
             {
                 this.toastr.info(
@@ -63,6 +65,9 @@ export class LoginComponent implements OnInit, OnDestroy {
                         positionClass: "toast-top-right"
                     }
                 );
+                // this.store.dispatch(new Login({authToken: res['token']}));
+                console.log('======', this.returnUrl);
+                this._router.navigate([this.returnUrl])
             }
             else {
               if (res['data'] === null) {

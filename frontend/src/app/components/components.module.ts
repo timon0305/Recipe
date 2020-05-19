@@ -19,7 +19,15 @@ import { PictureUploadComponent } from './picture-upload/picture-upload.componen
 import { FixedPluginComponent } from './fixed-plugin/fixed-plugin.component';
 
 @NgModule({
-  imports: [CommonModule,HttpClientModule, RouterModule, FormsModule, JwBootstrapSwitchNg2Module, NgbModule, DxVectorMapModule],
+  imports: [
+      CommonModule,
+      HttpClientModule,
+      RouterModule,
+      FormsModule,
+      JwBootstrapSwitchNg2Module,
+      NgbModule,
+      DxVectorMapModule,
+  ],
   declarations: [
     NavbarComponent,
     FooterComponent,
@@ -29,7 +37,8 @@ import { FixedPluginComponent } from './fixed-plugin/fixed-plugin.component';
     ImageUploadComponent,
     FileInputComponent,
     PictureUploadComponent,
-    FixedPluginComponent
+    FixedPluginComponent,
+
   ],
   exports: [
     NavbarComponent,

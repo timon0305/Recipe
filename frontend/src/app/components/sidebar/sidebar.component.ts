@@ -135,7 +135,10 @@ export class SidebarComponent implements OnInit {
 
   constructor(private toastr: ToastrService) {}
 
+  userName: string;
   ngOnInit() {
+    this.userName = localStorage.getItem('userName');
+
     this.menuItems = ROUTES.filter(menuItem => menuItem);
   }
   sleep(milliseconds) {
