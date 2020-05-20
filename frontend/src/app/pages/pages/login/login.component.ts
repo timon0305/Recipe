@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit, OnDestroy {
 
 
   ngOnInit() {
-      this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/app';
+      this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/app/dashboard';
     var $page = document.getElementsByClassName("full-page")[0];
     var image_src;
     var image_container = document.createElement("div");

@@ -25,7 +25,10 @@ export class NavbarComponent implements OnInit {
         this.sidebarVisible = false;
   }
 
+  userName: string;
   ngOnInit() {
+    this.userName = localStorage.getItem('userName');
+
     this.listTitles = ROUTES.filter(listTitle => listTitle);
     const navbar: HTMLElement = this.element.nativeElement;
     this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];

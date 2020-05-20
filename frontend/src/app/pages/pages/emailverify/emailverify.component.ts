@@ -55,7 +55,7 @@ export class EmailverifyComponent implements OnInit, OnDestroy {
                     positionClass: "toast-top-right"
                 }
             );
-            this._router.navigate(['app'])
+            this._router.navigate(['app/dashboard'])
         }
         else {
             this.toastr.info(
