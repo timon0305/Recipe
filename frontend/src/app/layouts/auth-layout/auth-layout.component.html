@@ -1,48 +1,354 @@
-<!--<nav-->
-  <!--class="navbar navbar-expand-lg navbar-transparent  navbar-absolute bg-primary "-->
-<!--&gt;-->
-  <!--<div class="container-fluid">-->
-    <!--<div class="navbar-wrapper">-->
+<nav
+  class="navbar navbar-expand-lg navbar-transparent  navbar-absolute"
+
+>
+  <div class="container-fluid">
+    <div class="navbar-wrapper">
       <!--<a class="navbar-brand" href="#aaa">{{ getTitle() }}</a>-->
-    <!--</div>-->
-    <!--<button class="navbar-toggler" type="button" (click)="collapse()"-->
-      <!--[attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">-->
-      <!--<span class="navbar-toggler-bar navbar-kebab"></span>-->
-      <!--<span class="navbar-toggler-bar navbar-kebab"></span>-->
-      <!--<span class="navbar-toggler-bar navbar-kebab"></span>-->
-    <!--</button>-->
-    <!--<div class="collapse navbar-collapse justify-content-end" id="collapseExample" [ngbCollapse]="!isCollapsed">-->
-      <!--<ul class="navbar-nav">-->
+      <ul class="navbar-nav">
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link">
+            <i class="now-ui-icons education_atom"></i> Recipe and Chef
+          </a>
+        </li>
+      </ul>
+      <!--<a href="#something"></a>-->
+      <!--<a href="#something">Features</a>-->
+      <!--<a href="#something">Contact Us</a>-->
+    </div>
+    <button class="navbar-toggler" type="button" (click)="collapse()"
+      [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+      <span class="navbar-toggler-bar navbar-kebab"></span>
+      <span class="navbar-toggler-bar navbar-kebab"></span>
+      <span class="navbar-toggler-bar navbar-kebab"></span>
+    </button>
+    <div class ="collapse navbar-collapse justify-content-end" [ngbCollapse]="!isCollapsed">
+      <ul class="navbar-nav">
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link">
+            <i class="now-ui-icons travel_info"></i> About Us
+          </a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" >
+            <i class="now-ui-icons gestures_tap-01"></i> Features
+          </a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" >
+            <i class="now-ui-icons ui-2_chat-round"></i> Contact Us
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="collapse navbar-collapse justify-content-end" id="collapseExample" [ngbCollapse]="!isCollapsed">
+      <ul class="navbar-nav">
         <!--<li class="nav-item" routerLinkActive="active">-->
           <!--<a class="nav-link" [routerLink]="['/dashboard']">-->
             <!--<i class="now-ui-icons design_app"></i> Dashboard-->
           <!--</a>-->
         <!--</li>-->
-        <!--<li class="nav-item" routerLinkActive="active">-->
-          <!--<a class="nav-link" [routerLink]="['/pages/register']">-->
-            <!--<i class="now-ui-icons tech_mobile"></i> Register-->
-          <!--</a>-->
-        <!--</li>-->
-        <!--<li class="nav-item" routerLinkActive="active">-->
-          <!--<a class="nav-link" [routerLink]="['/pages/login']">-->
-            <!--<i class="now-ui-icons users_circle-08"></i> Login-->
-          <!--</a>-->
-        <!--</li>-->
-        <!--<li class="nav-item" routerLinkActive="active">-->
-          <!--<a class="nav-link" [routerLink]="['/pages/pricing']">-->
-            <!--<i class="now-ui-icons now-ui-icons business_money-coins"></i>-->
-            <!--Pricing-->
-          <!--</a>-->
-        <!--</li>-->
-        <!--<li class="nav-item" routerLinkActive="active">-->
-          <!--<a class="nav-link" [routerLink]="['/pages/lock']">-->
-            <!--<i class="now-ui-icons ui-1_lock-circle-open"></i> Lock-->
-          <!--</a>-->
-        <!--</li>-->
-      <!--</ul>-->
-    <!--</div>-->
-  <!--</div>-->
-<!--</nav>-->
+
+        <li class="nav-item" routerLinkActive="active" >
+          <a class="nav-link" [routerLink]="['/pages/login']">
+            <i class="now-ui-icons users_circle-08"></i> Login
+          </a>
+        </li>
+        <li class="nav-item" routerLinkActive="active" >
+          <a class="nav-link" [routerLink]="['/pages/register']">
+            <i class="now-ui-icons users_single-02" ></i> Register
+          </a>
+        </li>
+
+        <!--<ng-template #Register let-c="close" let-d="dismiss">-->
+          <!--<div class="main-content user-register">-->
+            <!--<div class="">-->
+              <!--<div class="row">-->
+                <!--&lt;!&ndash;<div class="col-md-5 ml-auto">&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="info-area info-horizontal mt-5">&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="icon icon-primary">&ndash;&gt;-->
+                <!--&lt;!&ndash;<i class="now-ui-icons media-2_sound-wave"></i>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="description">&ndash;&gt;-->
+                <!--&lt;!&ndash;<h5 class="info-title">Marketing</h5>&ndash;&gt;-->
+                <!--&lt;!&ndash;<p class="description">&ndash;&gt;-->
+                <!--&lt;!&ndash;We've created the marketing campaign of the website. It was a very&ndash;&gt;-->
+                <!--&lt;!&ndash;interesting collaboration.&ndash;&gt;-->
+                <!--&lt;!&ndash;</p>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="info-area info-horizontal">&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="icon icon-primary">&ndash;&gt;-->
+                <!--&lt;!&ndash;<i class="now-ui-icons media-1_button-pause"></i>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="description">&ndash;&gt;-->
+                <!--&lt;!&ndash;<h5 class="info-title">Fully Coded in HTML5</h5>&ndash;&gt;-->
+                <!--&lt;!&ndash;<p class="description">&ndash;&gt;-->
+                <!--&lt;!&ndash;We've developed the website with HTML5 and CSS3. The client has&ndash;&gt;-->
+                <!--&lt;!&ndash;access to the code using GitHub.&ndash;&gt;-->
+                <!--&lt;!&ndash;</p>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="info-area info-horizontal">&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="icon icon-info">&ndash;&gt;-->
+                <!--&lt;!&ndash;<i class="now-ui-icons users_single-02"></i>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="description">&ndash;&gt;-->
+                <!--&lt;!&ndash;<h5 class="info-title">Built Audience</h5>&ndash;&gt;-->
+                <!--&lt;!&ndash;<p class="description">&ndash;&gt;-->
+                <!--&lt;!&ndash;There is also a Fully Customizable CMS Admin Dashboard for this&ndash;&gt;-->
+                <!--&lt;!&ndash;product.&ndash;&gt;-->
+                <!--&lt;!&ndash;</p>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--<div class="col-md-12 ml-auto mr-auto">-->
+                  <!--<div class="card card-signup text-center">-->
+                    <!--<form class="form" [formGroup]="register" (ngSubmit)="onSubmit()" >-->
+                      <!--<div class="card-header ">-->
+                        <!--<h4 class="card-title">Register</h4>-->
+                      <!--</div>-->
+                      <!--<div class="card-body ">-->
+                        <!--<div-->
+                                <!--class="input-group"-->
+                                <!--[ngClass]="{ 'input-group-focus': focus === true }"-->
+                        <!--&gt;-->
+                          <!--&lt;!&ndash;<div class="input-group-prepend">&ndash;&gt;-->
+                          <!--&lt;!&ndash;<div class="input-group-text">&ndash;&gt;-->
+                          <!--&lt;!&ndash;&lt;!&ndash;<i class="now-ui-icons users_circle-08"></i>&ndash;&gt;&ndash;&gt;-->
+                          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                          <!--<input-->
+                                  <!--type="text"-->
+                                  <!--class="form-control"-->
+                                  <!--placeholder="Username"-->
+                                  <!--(focus)="focus = true"-->
+                                  <!--(blur)="focus = false"-->
+                                  <!--formControlName="userName"-->
+                                  <!--[ngClass]="{'is-invalid': submitted && f.userName.errors}"-->
+                          <!--/>-->
+                          <!--<div *ngIf="submitted && f.userName.errors" class="invalid-feedback">-->
+                            <!--<div *ngIf="f.userName.errors.required">Username is required</div>-->
+                          <!--</div>-->
+                        <!--</div>-->
+                        <!--<div-->
+                                <!--class="input-group"-->
+                                <!--[ngClass]="{ 'input-group-focus': focus2 === true }"-->
+                        <!--&gt;-->
+                          <!--&lt;!&ndash;<div class="input-group-prepend">&ndash;&gt;-->
+                          <!--&lt;!&ndash;<div class="input-group-text">&ndash;&gt;-->
+                          <!--&lt;!&ndash;<i class="now-ui-icons ui-1_email-85"></i>&ndash;&gt;-->
+                          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                          <!--<input-->
+                                  <!--type="email"-->
+                                  <!--placeholder="Email"-->
+                                  <!--class="form-control"-->
+                                  <!--(focus)="focus2 = true"-->
+                                  <!--(blur)="focus2 = false"-->
+                                  <!--formControlName="userEmail"-->
+                                  <!--[ngClass]="{'is-invalid': submitted && f.userEmail.errors}"-->
+                          <!--/>-->
+                          <!--<div *ngIf="submitted && f.userEmail.errors" class="invalid-feedback">-->
+                            <!--<div *ngIf="f.userEmail.errors.required">Email is required</div>-->
+                            <!--<div *ngIf="f.userEmail.errors.email">Email must be a valid email address</div>-->
+                          <!--</div>-->
+                        <!--</div>-->
+                        <!--<div-->
+                                <!--class="input-group"-->
+                                <!--[ngClass]="{ 'input-group-focus': focus3 === true }"-->
+                        <!--&gt;-->
+                          <!--&lt;!&ndash;<div class="input-group-prepend">&ndash;&gt;-->
+                          <!--&lt;!&ndash;<div class="input-group-text">&ndash;&gt;-->
+                          <!--&lt;!&ndash;<i class="now-ui-icons objects_key-25"></i>&ndash;&gt;-->
+                          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                          <!--<input-->
+                                  <!--type="password"-->
+                                  <!--class="form-control"-->
+                                  <!--placeholder="Password"-->
+                                  <!--(focus)="focus3 = true"-->
+                                  <!--(blur)="focus3 = false"-->
+                                  <!--formControlName="password"-->
+                                  <!--[ngClass]="{'is-invalid': submitted && f.password.errors}"-->
+                          <!--/>-->
+                          <!--<div *ngIf="submitted && f.password.errors" class="invalid-feedback">-->
+                            <!--<div *ngIf="f.password.errors.required">Password is required</div>-->
+                            <!--<div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>-->
+                          <!--</div>-->
+                        <!--</div>-->
+                        <!--<div-->
+                                <!--class="input-group"-->
+                                <!--[ngClass]="{ 'input-group-focus': focus4 === true }"-->
+                        <!--&gt;-->
+                          <!--&lt;!&ndash;<div class="input-group-prepend">&ndash;&gt;-->
+                          <!--&lt;!&ndash;<div class="input-group-text">&ndash;&gt;-->
+                          <!--&lt;!&ndash;<i class="now-ui-icons ui-1_lock-circle-open"></i>&ndash;&gt;-->
+                          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                          <!--<input-->
+                                  <!--type="password"-->
+                                  <!--class="form-control"-->
+                                  <!--placeholder="Repeat Password"-->
+                                  <!--(focus)="focus4 = true"-->
+                                  <!--(blur)="focus4 = false"-->
+                                  <!--formControlName="confirmPassword"-->
+                                  <!--[ngClass]="{'is-invalid': submitted && f.confirmPassword.errors}"-->
+                          <!--/>-->
+                          <!--<div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">-->
+                            <!--<div *ngIf="f.confirmPassword.errors.required">Reset Password is required</div>-->
+                            <!--<div *ngIf="f.confirmPassword.errors.mustMatch">Password must match</div>-->
+                          <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form-check text-left">-->
+                          <!--<input-->
+                                  <!--class="form-check-input"-->
+                                  <!--type="checkbox"-->
+                                  <!--id="acceptTerms"-->
+                                  <!--formControlName="acceptTerms"-->
+                                  <!--[ngClass]="{'is-invalid': submitted && f.acceptTerms.errors}"-->
+
+                          <!--/>-->
+
+                          <!--<label for="acceptTerms" class="form-check-sign"> I agree to the <a href="#something">VitualChoppingBoard User Agreement</a> and-->
+                            <!--<a href="#something">Privacy Policy</a>.</label>-->
+                          <!--<div *ngIf="submitted && f.acceptTerms.errors" class="invalid-feedback">Accepts Ts & Cs is required</div>-->
+                        <!--</div>-->
+                      <!--</div>-->
+
+                      <!--<div class="card-footer ">-->
+                        <!--<button href="#pablo" class="btn btn-primary btn-round btn-lg btn-block mb-3" type="submit">Register</button>-->
+                        <!--<p>&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&nbsp; Or join with &nbsp; -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</p>-->
+                        <!--<div class="social">-->
+                          <!--<div>-->
+                            <!--<button class="btn btn-icon  btn-facebook">-->
+                              <!--<i class="fab fa-facebook-f"></i>&nbsp; facebook-->
+                            <!--</button>-->
+                          <!--</div>-->
+                          <!--<div>-->
+                            <!--<button class="btn btn-icon  btn-google">-->
+                              <!--<i class="fab fa-google"></i>&nbsp; google-->
+                            <!--</button>-->
+                          <!--</div>-->
+                        <!--</div>-->
+                        <!--<br>-->
+                        <!--<div class="pull-left">-->
+                          <!--<p>Already have an account? &nbsp;-->
+                            <!--<a (click)="user_login()" class="link footer-link">Login here</a>-->
+                          <!--</p>-->
+                        <!--</div>-->
+                        <!--<div class="pull-right">-->
+                        <!--</div>-->
+                      <!--</div>-->
+                    <!--</form>-->
+                  <!--</div>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</ng-template>-->
+        <!--<ng-template #Login let-c="close" let-d="dismiss">-->
+          <!--<div class="main-content user-login">-->
+            <!--<div class="">-->
+              <!--<div class="row">-->
+                <!--<div class="col-md-12 ml-auto mr-auto">-->
+                  <!--<form class="form" [formGroup]="login" (ngSubmit)="onSubmit()" action="">-->
+                    <!--<div class="card card-signup text-center">-->
+                      <!--<div class="card-header ">-->
+                        <!--<div class="logo-container">-->
+                          <!--<img src="assets/img/now-logo.png" alt="" />-->
+                        <!--</div>-->
+                      <!--</div>-->
+                      <!--<div class="card-body ">-->
+                        <!--<div-->
+                                <!--class="input-group"-->
+                                <!--[ngClass]="{ 'input-group-focus': focus === true }"-->
+                        <!--&gt;-->
+                          <!--&lt;!&ndash;<div class="input-group-prepend">&ndash;&gt;-->
+                          <!--&lt;!&ndash;<div class="input-group-text">&ndash;&gt;-->
+                          <!--&lt;!&ndash;<i class="now-ui-icons ui-1_email-85"></i>&ndash;&gt;-->
+                          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                          <!--<input-->
+                                  <!--type="email"-->
+                                  <!--placeholder="Email"-->
+                                  <!--class="form-control"-->
+                                  <!--(focus)="focus = true"-->
+                                  <!--(blur)="focus = false"-->
+                                  <!--formControlName="userEmail"-->
+                                  <!--[ngClass]="{'is-invalid': submitted && f.userEmail.errors}"-->
+                          <!--/>-->
+                          <!--<div *ngIf="submitted && f.userEmail.errors" class="invalid-feedback">-->
+                            <!--<div *ngIf="f.userEmail.errors.required">Email is required</div>-->
+                            <!--<div *ngIf="f.userEmail.errors.email">Email must be a valid email address</div>-->
+                          <!--</div>-->
+                        <!--</div>-->
+                        <!--<div-->
+                                <!--class="input-group"-->
+                                <!--[ngClass]="{ 'input-group-focus': focus2 === true }"-->
+                        <!--&gt;-->
+                          <!--&lt;!&ndash;<div class="input-group-prepend">&ndash;&gt;-->
+                          <!--&lt;!&ndash;<div class="input-group-text">&ndash;&gt;-->
+                          <!--&lt;!&ndash;<i class="now-ui-icons objects_key-25"></i>&ndash;&gt;-->
+                          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                          <!--<input-->
+                                  <!--type="password"-->
+                                  <!--class="form-control"-->
+                                  <!--placeholder="Password"-->
+                                  <!--(focus)="focus2 = true"-->
+                                  <!--(blur)="focus2 = false"-->
+                                  <!--formControlName="password"-->
+                                  <!--[ngClass]="{'is-invalid': submitted && f.password.errors}"-->
+                          <!--/>-->
+                          <!--<div *ngIf="submitted && f.password.errors" class="invalid-feedback">-->
+                            <!--<div *ngIf="f.password.errors.required">Password is required</div>-->
+                            <!--<div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>-->
+                          <!--</div>-->
+                        <!--</div>-->
+                        <!--<p><a (click)="resetPassword()">Forgot Password?</a></p>-->
+                      <!--</div>-->
+                      <!--<div class="card-footer ">-->
+                        <!--<button type="submit" href="#pablo"-->
+                                <!--class="btn btn-primary btn-round btn-lg btn-block mb-3"-->
+                        <!--&gt;Login</button-->
+                        <!--&gt;-->
+                        <!--<p>&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&nbsp; Or join with &nbsp; -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</p>-->
+                        <!--<div class="social">-->
+                          <!--<div>-->
+                            <!--<button class="btn btn-icon  btn-facebook">-->
+                              <!--<i class="fab fa-facebook-f"></i>&nbsp; facebook-->
+                            <!--</button>-->
+                          <!--</div>-->
+                          <!--<div>-->
+                            <!--<button class="btn btn-icon  btn-google">-->
+                              <!--<i class="fab fa-google"></i>&nbsp; google-->
+                            <!--</button>-->
+                          <!--</div>-->
+                        <!--</div>-->
+                        <!--<br>-->
+                        <!--<div class="pull-left">-->
+                          <!--<p>Don't you have an account? &nbsp;-->
+                            <!--<a (click)="user_register()" class="link footer-link"> Join here</a>-->
+                          <!--</p>-->
+                        <!--</div>-->
+                        <!--<div class="pull-right">-->
+
+                        <!--</div>-->
+                      <!--</div>-->
+                    <!--</div>-->
+                  <!--</form>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+
+        <!--</ng-template>-->
+
+      </ul>
+    </div>
+  </div>
+</nav>
 <div class="wrapper wrapper-full-page ">
   <div class="full-page section-image" filter-color="black">
     <router-outlet></router-outlet>

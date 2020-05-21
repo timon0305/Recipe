@@ -2,14 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="731b5215-791b-435d-b67c-494ed7ff916c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/app.routing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/app.routing.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/components/navbar/navbar.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/components/navbar/navbar.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/user.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/user.controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/app/components/navbar/navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/components/navbar/navbar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/components/navbar/navbar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/components/navbar/navbar.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/core/auth/guards/auth.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/core/auth/guards/auth.guard.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/layouts/admin-layout/admin-layout.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/layouts/admin-layout/admin-layout.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/layouts/auth-layout/auth-layout.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/layouts/auth-layout/auth-layout.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/layouts/auth-layout/auth-layout.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/layouts/auth-layout/auth-layout.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/layouts/auth-layout/auth-layout.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/layouts/auth-layout/auth-layout.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/pages/dashboard/dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/pages/dashboard/dashboard.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/pages/pages/confirmcode/confirmcode.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/pages/pages/confirmcode/confirmcode.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/pages/pages/confirmcode/confirmcode.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/pages/pages/confirmcode/confirmcode.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/pages/pages/confirmcode/confirmcode.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/pages/pages/confirmcode/confirmcode.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/pages/pages/confirmemail/confirmemail.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/pages/pages/confirmemail/confirmemail.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/pages/pages/confirmemail/confirmemail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/pages/pages/confirmemail/confirmemail.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/pages/pages/emailverify/emailverify.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/pages/pages/emailverify/emailverify.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/pages/pages/emailverify/emailverify.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/pages/pages/emailverify/emailverify.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/app/pages/pages/emailverify/emailverify.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/pages/pages/emailverify/emailverify.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/pages/pages/login/login.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/pages/pages/login/login.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/pages/pages/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/pages/pages/login/login.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/app/pages/pages/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/pages/pages/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/pages/pages/register/register.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/pages/pages/register/register.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/pages/pages/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/pages/pages/register/register.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/pages/pages/register/register.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/pages/pages/register/register.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/pages/pages/resetpassword/resetpassword.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/pages/pages/resetpassword/resetpassword.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/app/pages/pages/resetpassword/resetpassword.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/pages/pages/resetpassword/resetpassword.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/scss/now-ui-dashboard/_cards.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/assets/scss/now-ui-dashboard/_cards.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/scss/now-ui-dashboard/_example-pages.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/assets/scss/now-ui-dashboard/_example-pages.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/scss/now-ui-dashboard/_inputs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/assets/scss/now-ui-dashboard/_inputs.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/scss/now-ui-dashboard/_navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/assets/scss/now-ui-dashboard/_navbar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/scss/now-ui-dashboard/_sections.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/assets/scss/now-ui-dashboard/_sections.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,8 +47,11 @@
     <session id="1572208881">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.22" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -40,7 +66,7 @@
         <counts>
           <entry key=".env file" value="23" />
           <entry key="JSON" value="3" />
-          <entry key="JavaScript" value="7309" />
+          <entry key="JavaScript" value="7408" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -51,7 +77,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -64,8 +90,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.env">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="154">
+              <caret line="6" column="86" selection-start-line="6" selection-start-column="86" selection-end-line="6" selection-end-column="86" />
             </state>
           </provider>
         </entry>
@@ -73,7 +99,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/node_modules/express/lib/application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
+            <state relative-caret-position="3960">
               <caret line="186" selection-start-line="186" selection-end-line="186" />
             </state>
           </provider>
@@ -82,7 +108,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Router/user.router.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
+            <state relative-caret-position="440">
               <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
             </state>
           </provider>
@@ -100,8 +126,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+            <state relative-caret-position="462">
+              <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -109,8 +135,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Controller/user.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="195" column="10" lean-forward="true" selection-start-line="195" selection-start-column="10" selection-end-line="195" selection-end-column="10" />
+            <state relative-caret-position="379">
+              <caret line="162" column="52" selection-start-line="162" selection-start-column="52" selection-end-line="162" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -138,8 +164,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Service/user.service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="102" column="9" lean-forward="true" selection-start-line="102" selection-start-column="9" selection-end-line="102" selection-end-column="9" />
+            <state relative-caret-position="2244">
+              <caret line="102" column="9" selection-start-line="102" selection-start-column="9" selection-end-line="102" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -167,11 +193,11 @@
       <list>
         <option value="$PROJECT_DIR$/Config/database.js" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/Controller/middleware.js" />
         <option value="$PROJECT_DIR$/Router/user.router.js" />
         <option value="$PROJECT_DIR$/Service/user.service.js" />
+        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/Controller/user.controller.js" />
       </list>
     </option>
@@ -239,7 +265,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.13.1" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../dinbog/angular-template-milan" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
@@ -272,25 +298,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1589854856508</updated>
-      <workItem from="1589854857994" duration="34875000" />
+      <workItem from="1589854857994" duration="35457000" />
+      <workItem from="1589963992985" duration="638000" />
+      <workItem from="1590045535218" duration="3774000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34875000" />
+    <option name="totallyTimeSpent" value="39869000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="11" width="1208" height="1057" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21282052" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21282052" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="TypeScript" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" visible="true" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -298,6 +321,11 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TypeScript" order="9" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -324,17 +352,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="186" selection-start-line="186" selection-end-line="186" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/bcryptjs/externs/minimal-env.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
           <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3960">
+          <caret line="186" selection-start-line="186" selection-end-line="186" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Router/user.router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/middleware.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -347,20 +403,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Config/database.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -368,38 +410,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/middleware.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Router/user.router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Service/user.service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="102" column="9" lean-forward="true" selection-start-line="102" selection-start-column="9" selection-end-line="102" selection-end-column="9" />
+        <state relative-caret-position="2244">
+          <caret line="102" column="9" selection-start-line="102" selection-start-column="9" selection-end-line="102" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="6" column="86" selection-start-line="6" selection-start-column="86" selection-end-line="6" selection-end-column="86" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Controller/user.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="195" column="10" lean-forward="true" selection-start-line="195" selection-start-column="10" selection-end-line="195" selection-end-column="10" />
+        <state relative-caret-position="379">
+          <caret line="162" column="52" selection-start-line="162" selection-start-column="52" selection-end-line="162" selection-end-column="52" />
         </state>
       </provider>
     </entry>

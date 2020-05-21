@@ -9,7 +9,7 @@
     vertical-align: middle;
 
     &:not(.btn):not(.dropdown-item) {
-      color: $white-color;
+      color: $black-color;
     }
 
     &.dropdown-item {
@@ -51,7 +51,7 @@
 
     &.no-border {
       .form-control {
-        color: $white-color;
+        color: $black-color;
 
         @include placeholder() {
           color: $white-color;
@@ -129,7 +129,7 @@
 
     .nav-link {
       text-transform: uppercase;
-      font-size: $font-size-mini;
+      font-size: $font-size-base;
       padding: $padding-base-vertical $padding-base-horizontal;
       line-height: $line-height-nav-link;
       margin-right: 3px;
@@ -170,7 +170,7 @@
     .nav-item .nav-link:not(.btn):focus,
     .nav-item .nav-link:not(.btn):hover,
     .nav-item .nav-link:not(.btn):active {
-      background-color: $opacity-2;
+      background-color: $opacity-8;
       border-radius: $border-radius-small;
       color: $white-color;
     }
@@ -216,7 +216,8 @@
 
   &.navbar-transparent {
     //background-color: $transparent-bg !important;
-    box-shadow: none;
+    //box-shadow: none;
+    background-color: rgb(255,255,255, 0.5);
     color: $white-color;
   }
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import * as Chartist from "chartist";
+import {Validators} from '@angular/forms';
 
 @Component({
   selector: "app-dashboard",
@@ -63,7 +64,6 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     this.token = localStorage.getItem('token')
-
 
     // this.gradientChartOptionsConfiguration = {
     //   maintainAspectRatio: false,

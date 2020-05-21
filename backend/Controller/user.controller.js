@@ -160,8 +160,8 @@ module.exports = {
                 const message = {
                     to: body.userEmail,
                     from: 'timon0305@outlook.com',
-                    subject: 'Account Verification Token',
-                    text: 'Hello, ' + body.userName + '\n\n' + 'Please verification your account code \n\n' + token + '\n',
+                    subject: 'Reset Password Confirm',
+                    text: 'Hello, ' + results.userName + '\n\n' + 'Please verification your account code for reset password \n\n' + token + '\n',
                 };
                 sgMail.send(message);
                 body.code = token;

@@ -4,11 +4,30 @@ import {AuthService} from '../../../core/auth/service/auth.service';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {first} from 'rxjs/operators';
 import {ToastrService} from 'ngx-toastr';
+import {animate, state, style, transition, trigger} from '@angular/animations';
 
 @Component({
   selector: "app-login",
   templateUrl: "./login.component.html",
-  styleUrls: ["./login.component.css"]
+  styleUrls: ["./login.component.css"],
+    animations: [
+        // the fade-in/fade-out animation.
+        trigger('simpleFadeAnimation', [
+
+            // the "in" style determines the "resting" state of the element when it is visible.
+            state('in', style({opacity: 1})),
+
+            // fade in when created. this could also be written as transition('void => *')
+            transition(':enter', [
+                style({opacity: 0}),
+                animate(600 )
+            ]),
+
+            // fade out when destroyed. this could also be written as transition('void => *')
+            transition(':leave',
+                animate(600, style({opacity: 0})))
+        ])
+    ]
 })
 export class LoginComponent implements OnInit, OnDestroy {
   private focus;
@@ -33,7 +52,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     var image_src;
     var image_container = document.createElement("div");
     image_container.classList.add("full-page-background");
-    // image_container.style.backgroundImage = "url(assets/img/bg14.jpg)";
+    image_container.style.backgroundImage = "url(assets/background/backgrounds.jpg)";
     $page.appendChild(image_container);
     $page.classList.add("login-page");
 
