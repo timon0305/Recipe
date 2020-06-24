@@ -3,7 +3,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {AuthService} from '../../../core/auth/service/auth.service';
 import {ToastrService} from 'ngx-toastr';
 import {Router} from '@angular/router';
-import {MustMatch} from '../../forms/validation-forms/password-validator.component';
+import {MustMatch} from './_helpers/must-match.validator';
 
 @Component({
   selector: 'app-resetpassword',
@@ -12,8 +12,8 @@ import {MustMatch} from '../../forms/validation-forms/password-validator.compone
 })
 export class ResetpasswordComponent implements OnInit, OnDestroy {
 
-    private focus3;
-    private focus4;
+    public focus3;
+    public focus4;
 
     constructor(
         private formBuilder: FormBuilder,

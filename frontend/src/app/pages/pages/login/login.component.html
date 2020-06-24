@@ -11,7 +11,7 @@
           <div class="card-body ">
               <div
                       class="input-group"
-                      [ngClass]="{ 'input-group-focus': focus === true }"
+                      [ngClass]="{ 'input-group-focus': focus1 === true }"
               >
                 <!--<div class="input-group-prepend">-->
                   <!--<div class="input-group-text">-->
@@ -22,8 +22,8 @@
                         type="email"
                         placeholder="Email"
                         class="form-control"
-                        (focus)="focus = true"
-                        (blur)="focus = false"
+                        (focus)="focus1 = true"
+                        (blur)="focus1 = false"
                         formControlName="userEmail"
                         [ngClass]="{'is-invalid': submitted && f.userEmail.errors}"
                 />

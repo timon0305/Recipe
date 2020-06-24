@@ -105,81 +105,81 @@
                         <i class="now-ui-icons design_bullet-list-67"></i>
                     </div>
                 </div>
-                <div *ngIf="miscRight.sidebarRight_mini_active===false">
-                    <div class="rightTable">
-                        <div class="main-content">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="card">
-                                        <div class="card-header"><h4 class="card-title">Ngx Datatable</h4></div>
-                                        <div class="card-body">
-                                            <div class="toolbar">
-                                                <!--        Here you can write extra buttons/actions for the toolbar              -->
-                                            </div>
-                                            <div class="dataTables_wrapper">
-                                                <div class="row">
-                                                    <div class="col-sm-12 col-md-6">
-                                                        <div class="dataTables_length" id="datatableRight_length">
-                                                            <label>
-                                                                Show
-                                                                <select
-                                                                        name="datatable_length"
-                                                                        aria-controls="datatable"
-                                                                        class="form-control form-control-sm"
-                                                                        (change)="entriesChange($event)"
-                                                                >
-                                                                    <option value="10" [selected]="entries==10">10</option>
-                                                                    <option value="25" [selected]="entries==25">25</option>
-                                                                    <option value="50" [selected]="entries==50">50</option>
-                                                                    <option value="-1" [selected]="entries==-1">All</option>
-                                                                </select>
-                                                                entries
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-12 col-md-6">
-                                                        <div id="datatableRight_filter" class="dataTables_filter">
-                                                            <label>
-                                                                <input
-                                                                        type="search"
-                                                                        class="form-control form-control-sm"
-                                                                        placeholder="Search records"
-                                                                        aria-controls="datatable"
-                                                                        (keyup)="filterTable($event)"
-                                                                />
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                <!--<div *ngIf="miscRight.sidebarRight_mini_active===false">-->
+                    <!--<div class="rightTable">-->
+                        <!--<div class="main-content">-->
+                            <!--<div class="row">-->
+                                <!--<div class="col-md-12">-->
+                                    <!--<div class="card">-->
+                                        <!--<div class="card-header"><h4 class="card-title">Ngx Datatable</h4></div>-->
+                                        <!--<div class="card-body">-->
+                                            <!--<div class="toolbar">-->
+                                                <!--&lt;!&ndash;        Here you can write extra buttons/actions for the toolbar              &ndash;&gt;-->
+                                            <!--</div>-->
+                                            <!--<div class="dataTables_wrapper">-->
+                                                <!--<div class="row">-->
+                                                    <!--<div class="col-sm-12 col-md-6">-->
+                                                        <!--<div class="dataTables_length" id="datatableRight_length">-->
+                                                            <!--<label>-->
+                                                                <!--Show-->
+                                                                <!--<select-->
+                                                                        <!--name="datatable_length"-->
+                                                                        <!--aria-controls="datatable"-->
+                                                                        <!--class="form-control form-control-sm"-->
+                                                                        <!--(change)="entriesChange($event)"-->
+                                                                <!--&gt;-->
+                                                                    <!--<option value="10" [selected]="entries==10">10</option>-->
+                                                                    <!--<option value="25" [selected]="entries==25">25</option>-->
+                                                                    <!--<option value="50" [selected]="entries==50">50</option>-->
+                                                                    <!--<option value="-1" [selected]="entries==-1">All</option>-->
+                                                                <!--</select>-->
+                                                                <!--entries-->
+                                                            <!--</label>-->
+                                                        <!--</div>-->
+                                                    <!--</div>-->
+                                                    <!--<div class="col-sm-12 col-md-6">-->
+                                                        <!--<div id="datatableRight_filter" class="dataTables_filter">-->
+                                                            <!--<label>-->
+                                                                <!--<input-->
+                                                                        <!--type="search"-->
+                                                                        <!--class="form-control form-control-sm"-->
+                                                                        <!--placeholder="Search records"-->
+                                                                        <!--aria-controls="datatable"-->
+                                                                        <!--(keyup)="filterTable($event)"-->
+                                                                <!--/>-->
+                                                            <!--</label>-->
+                                                        <!--</div>-->
+                                                    <!--</div>-->
+                                                <!--</div>-->
 
-                                                <ngx-datatable
-                                                        class="bootstrap selection-cell"
-                                                        [columnMode]="'force'"
-                                                        [headerHeight]="50"
-                                                        [footerHeight]="50"
-                                                        [rowHeight]="'auto'"
-                                                        [limit]="entries != -1 ? entries:undefined"
-                                                        [rows]="temp"
-                                                        (activate)="onActivate($event)"
-                                                >
-                                                    <ngx-datatable-column name="Name"></ngx-datatable-column>
-                                                    <ngx-datatable-column name="Position"></ngx-datatable-column>
-                                                    <ngx-datatable-column name="Office"></ngx-datatable-column>
-                                                    <ngx-datatable-column name="Age"></ngx-datatable-column>
-                                                </ngx-datatable>
-                                            </div>
+                                                <!--<ngx-datatable-->
+                                                        <!--class="bootstrap selection-cell"-->
+                                                        <!--[columnMode]="'force'"-->
+                                                        <!--[headerHeight]="50"-->
+                                                        <!--[footerHeight]="50"-->
+                                                        <!--[rowHeight]="'auto'"-->
+                                                        <!--[limit]="entries != -1 ? entries:undefined"-->
+                                                        <!--[rows]="temp"-->
+                                                        <!--(activate)="onActivate($event)"-->
+                                                <!--&gt;-->
+                                                    <!--<ngx-datatable-column name="Name"></ngx-datatable-column>-->
+                                                    <!--<ngx-datatable-column name="Position"></ngx-datatable-column>-->
+                                                    <!--<ngx-datatable-column name="Office"></ngx-datatable-column>-->
+                                                    <!--<ngx-datatable-column name="Age"></ngx-datatable-column>-->
+                                                <!--</ngx-datatable>-->
+                                            <!--</div>-->
 
-                                        </div>
-                                        <!-- end content-->
-                                    </div>
-                                    <!--  end card  -->
-                                </div>
-                                <!-- end col-md-12 -->
-                            </div>
-                            <!-- end row -->
-                        </div>
-                    </div>
-                </div>
+                                        <!--</div>-->
+                                        <!--&lt;!&ndash; end content&ndash;&gt;-->
+                                    <!--</div>-->
+                                    <!--&lt;!&ndash;  end card  &ndash;&gt;-->
+                                <!--</div>-->
+                                <!--&lt;!&ndash; end col-md-12 &ndash;&gt;-->
+                            <!--</div>-->
+                            <!--&lt;!&ndash; end row &ndash;&gt;-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
             </div>
         </div>
     </div>

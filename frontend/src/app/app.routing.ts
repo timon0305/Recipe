@@ -25,20 +25,12 @@ export const AppRoutes: Routes = [
           "./pages/components/components.module#ComponentsPageModule"
       },
       {
-        path: "forms",
-        loadChildren: "./pages/forms/forms.module#Forms"
-      },
-      {
         path: "tables",
         loadChildren: "./pages/tables/tables.module#TablesModule"
       },
       {
         path: "maps",
         loadChildren: "./pages/maps/maps.module#MapsModule"
-      },
-      {
-        path: "widgets",
-        loadChildren: "./pages/widgets/widgets.module#WidgetsModule"
       },
       {
         path: "charts",

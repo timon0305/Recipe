@@ -30,8 +30,8 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
     ]
 })
 export class LoginComponent implements OnInit, OnDestroy {
-  private focus;
-  private focus2;
+  public focus1;
+  public focus2;
     returnUrl: string;
   constructor(
       private _router: Router,
