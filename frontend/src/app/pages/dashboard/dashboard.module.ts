@@ -8,11 +8,13 @@ import { ComponentsModule } from "../../components/components.module";
 import { DashboardRoutes } from "./dashboard.routing";
 
 import { DashboardComponent } from "./dashboard.component";
+import {NgxDatatableModule} from '@swimlane/ngx-datatable';
 
 @NgModule({
   imports: [
     CommonModule,
     NgbModule,
+    NgxDatatableModule,
     RouterModule.forChild(DashboardRoutes),
     ComponentsModule,
     ChartsModule

@@ -1,0 +1,92 @@
+.paneLeftHandle {
+    background-color: #7fc6bc;
+    color: #fff;
+    margin: 0px !important;
+    cursor: pointer;
+    word-break: break-all;
+    padding: 9px;
+    font-weight: bold;
+    float: right;
+    height: auto;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 0 10px 10px 0;
+}
+.paneRightHandle {
+    background-color: #7fc6bc;
+    color: #fff;
+    margin: 0px !important;
+    cursor: pointer;
+    word-break: break-all;
+    padding: 9px;
+    font-weight: bold;
+    float: left;
+    height: auto;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 10px 0 0 10px;
+}
+.leftTable{
+    border: 1px solid red;
+}
+.rightTable {
+    border: 1px solid red;
+    float: right;
+}
+@media (min-width: 1200px) {
+    .paneLeftHandle {
+        width: 6%;
+    }
+    .paneRightHandle {
+        width: 6%;
+    }
+    .leftTable {
+        width: 94%;
+    }
+    .rightTable {
+        width: 94%;
+    }
+}
+@media (max-width: 1200px) {
+    .paneLeftHandle {
+        width: 10%;
+    }
+    .paneRightHandle {
+        width: 10%;
+    }
+    .leftTable {
+        width: 90%;
+    }
+    .rightTable {
+        width: 90%;
+    }
+}
+@media (max-width: 1000px) {
+    .paneLeftHandle {
+        width: 10%;
+    }
+    .paneRightHandle {
+        width: 10%;
+    }
+    .leftTable {
+        width: 10%;
+    }
+    .rightTable {
+        width: 90%;
+    }
+}
+@media (max-width: 1000px) {
+    .paneLeftHandle {
+        width: 5%;
+    }
+    .paneRightHandle {
+        width: 5%;
+    }
+    .leftTable  {
+        width: 95%;
+    }
+    .rightTable {
+        width: 95%;
+    }
+}
+

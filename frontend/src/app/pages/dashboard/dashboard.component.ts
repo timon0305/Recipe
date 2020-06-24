@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import * as Chartist from "chartist";
-import {Validators} from '@angular/forms';
+
+
 
 @Component({
   selector: "app-dashboard",
@@ -8,365 +8,298 @@ import {Validators} from '@angular/forms';
   styleUrls: ["./dashboard.component.css"]
 })
 export class DashboardComponent implements OnInit {
-  public gradientStroke;
-  public chartColor;
-  public canvas: any;
-  public ctx;
-  public gradientFill;
+    token: string;
+    public miscLeft:any ={
+        sidebarLeft_mini_active: false
+    };
+    public miscRight:any ={
+        sidebarRight_mini_active: false
+    };
+    test: any =  `<button (click)="onSelect($event)">Click me</button>`;
+    entries: number = 10;
+    selected: any[] = [];
+    temp = [];
+    activeRow: any;
+    rows: any = [
+        {
+            name: "Tiger Nixon",
+            position: "System Architect",
+            office: "Edinburgh",
+            age: "61"
+        },
+        {
+            name: "Garrett Winters",
+            position: "Accountant",
+            office: "Tokyo",
+            age: "63"
+        },
+        {
+            name: "Ashton Cox",
+            position: "Junior Technical Author",
+            office: "San Francisco",
+            age: "66"
+        },
+        {
+            name: "Cedric Kelly",
+            position: "Senior Javascript Developer",
+            office: "Edinburgh",
+            age: "22"
+        },
+        { name: "Airi Satou", position: "Accountant", office: "Tokyo", age: "33" },
+        {
+            name: "Brielle Williamson",
+            position: "Integration Specialist",
+            office: "New York",
+            age: "61"
+        },
+        {
+            name: "Herrod Chandler",
+            position: "Sales Assistant",
+            office: "San Francisco",
+            age: "59"
+        },
+        {
+            name: "Rhona Davidson",
+            position: "Integration Specialist",
+            office: "Tokyo",
+            age: "55"
+        },
+        {
+            name: "Colleen Hurst",
+            position: "Javascript Developer",
+            office: "San Francisco",
+            age: "39"
+        },
+        {
+            name: "Sonya Frost",
+            position: "Software Engineer",
+            office: "Edinburgh",
+            age: "23"
+        },
+        {
+            name: "Jena Gaines",
+            position: "Office Manager",
+            office: "London",
+            age: "30"
+        },
+        {
+            name: "Quinn Flynn",
+            position: "Support Lead",
+            office: "Edinburgh",
+            age: "22"
+        },
+        {
+            name: "Charde Marshall",
+            position: "Regional Director",
+            office: "San Francisco",
+            age: "36"
+        },
+        {
+            name: "Haley Kennedy",
+            position: "Senior Marketing Designer",
+            office: "London",
+            age: "43"
+        },
+        {
+            name: "Tatyana Fitzpatrick",
+            position: "Regional Director",
+            office: "London",
+            age: "19"
+        },
+        {
+            name: "Michael Silva",
+            position: "Marketing Designer",
+            office: "London",
+            age: "66"
+        },
+        {
+            name: "Paul Byrd",
+            position: "Chief Financial Officer (CFO)",
+            office: "New York",
+            age: "64"
+        },
+        {
+            name: "Gloria Little",
+            position: "Systems Administrator",
+            office: "New York",
+            age: "59"
+        },
+        {
+            name: "Bradley Greer",
+            position: "Software Engineer",
+            office: "London",
+            age: "41"
+        },
+        {
+            name: "Dai Rios",
+            position: "Personnel Lead",
+            office: "Edinburgh",
+            age: "35"
+        },
+        {
+            name: "Jenette Caldwell",
+            position: "Development Lead",
+            office: "New York",
+            age: "30"
+        },
+        {
+            name: "Yuri Berry",
+            position: "Chief Marketing Officer (CMO)",
+            office: "New York",
+            age: "40"
+        },
+        {
+            name: "Caesar Vance",
+            position: "Pre-Sales Support",
+            office: "New York",
+            age: "21"
+        },
+        {
+            name: "Doris Wilder",
+            position: "Sales Assistant",
+            office: "Sidney",
+            age: "23"
+        },
+        {
+            name: "Angelica Ramos",
+            position: "Chief Executive Officer (CEO)",
+            office: "London",
+            age: "47"
+        },
+        {
+            name: "Gavin Joyce",
+            position: "Developer",
+            office: "Edinburgh",
+            age: "42"
+        },
+        {
+            name: "Jennifer Chang",
+            position: "Regional Director",
+            office: "Singapore",
+            age: "28"
+        },
+        {
+            name: "Brenden Wagner",
+            position: "Software Engineer",
+            office: "San Francisco",
+            age: "28"
+        },
+        {
+            name: "Fiona Green",
+            position: "Chief Operating Officer (COO)",
+            office: "San Francisco",
+            age: "48"
+        },
+        {
+            name: "Shou Itou",
+            position: "Regional Marketing",
+            office: "Tokyo",
+            age: "20"
+        },
+        {
+            name: "Michelle House",
+            position: "Integration Specialist",
+            office: "Sidney",
+            age: "37"
+        },
+        { name: "Suki Burks", position: "Developer", office: "London", age: "53" },
+        {
+            name: "Prescott Bartlett",
+            position: "Technical Author",
+            office: "London",
+            age: "27"
+        },
+        {
+            name: "Gavin Cortez",
+            position: "Team Leader",
+            office: "San Francisco",
+            age: "22"
+        },
+        {
+            name: "Martena Mccray",
+            position: "Post-Sales support",
+            office: "Edinburgh",
+            age: "46"
+        },
+        {
+            name: "Unity Butler",
+            position: "Marketing Designer",
+            office: "San Francisco",
+            age: "47"
+        },
+        {
+            name: "Howard Hatfield",
+            position: "Office Manager",
+            office: "San Francisco",
+            age: "51"
+        },
+        {
+            name: "Hope Fuentes",
+            position: "Secretary",
+            office: "San Francisco",
+            age: "41"
+        },
+        {
+            name: "Vivian Harrell",
+            position: "Financial Controller",
+            office: "San Francisco",
+            age: "62"
+        },
+        {
+            name: "Timothy Mooney",
+            position: "Office Manager",
+            office: "London",
+            age: "37"
+        },
+        {
+            name: "Jackson Bradshaw",
+            position: "Director",
+            office: "New York",
+            age: "65"
+        },
+        {
+            name: "Olivia Liang",
+            position: "Support Engineer",
+            office: "Singapore",
+            age: "64"
+        }
+    ];
+  constructor() {
+      this.temp = this.rows.map((prop,key)=>{
+          return {
+              ...prop,
+              id: key
+          };
 
-  public lineBigDashboardChartType;
-  public lineBigDashboardChartData: Array<any>;
-  public lineBigDashboardChartOptions: any;
-  public lineBigDashboardChartLabels: Array<any>;
-  public lineBigDashboardChartColors: Array<any>;
-
-  public gradientChartOptionsConfiguration: any;
-  public gradientChartOptionsConfigurationWithNumbersAndGrid: any;
-
-  public lineChartType;
-  public lineChartData: Array<any>;
-  public lineChartOptions: any;
-  public lineChartLabels: Array<any>;
-  public lineChartColors: Array<any>;
-
-  public lineChartWithNumbersAndGridType;
-  public lineChartWithNumbersAndGridData: Array<any>;
-  public lineChartWithNumbersAndGridOptions: any;
-  public lineChartWithNumbersAndGridLabels: Array<any>;
-  public lineChartWithNumbersAndGridColors: Array<any>;
-
-  public lineChartGradientsNumbersType;
-  public lineChartGradientsNumbersData: Array<any>;
-  public lineChartGradientsNumbersOptions: any;
-  public lineChartGradientsNumbersLabels: Array<any>;
-  public lineChartGradientsNumbersColors: Array<any>;
-
-  public chartClicked(e: any): void {
-    console.log(e);
+      });
   }
-
-  public chartHovered(e: any): void {
-    console.log(e);
-  }
-  public hexToRGB(hex, alpha) {
-    var r = parseInt(hex.slice(1, 3), 16),
-      g = parseInt(hex.slice(3, 5), 16),
-      b = parseInt(hex.slice(5, 7), 16);
-
-    if (alpha) {
-      return "rgba(" + r + ", " + g + ", " + b + ", " + alpha + ")";
-    } else {
-      return "rgb(" + r + ", " + g + ", " + b + ")";
-    }
-  }
-  token: string;
-  constructor() {}
 
   ngOnInit() {
     this.token = localStorage.getItem('token')
 
-    // this.gradientChartOptionsConfiguration = {
-    //   maintainAspectRatio: false,
-    //   legend: {
-    //     display: false
-    //   },
-    //   tooltips: {
-    //     bodySpacing: 4,
-    //     mode: "nearest",
-    //     intersect: 0,
-    //     position: "nearest",
-    //     xPadding: 10,
-    //     yPadding: 10,
-    //     caretPadding: 10
-    //   },
-    //   responsive: 1,
-    //   scales: {
-    //     yAxes: [
-    //       {
-    //         display: 0,
-    //         ticks: {
-    //           display: false
-    //         },
-    //         gridLines: {
-    //           zeroLineColor: "transparent",
-    //           drawTicks: false,
-    //           display: false,
-    //           drawBorder: false
-    //         }
-    //       }
-    //     ],
-    //     xAxes: [
-    //       {
-    //         display: 0,
-    //         ticks: {
-    //           display: false
-    //         },
-    //         gridLines: {
-    //           zeroLineColor: "transparent",
-    //           drawTicks: false,
-    //           display: false,
-    //           drawBorder: false
-    //         }
-    //       }
-    //     ]
-    //   },
-    //   layout: {
-    //     padding: {
-    //       left: 0,
-    //       right: 0,
-    //       top: 15,
-    //       bottom: 15
-    //     }
-    //   }
-    // };
-    //
-    // this.chartColor = "#FFFFFF";
-    // this.canvas = document.getElementById("bigDashboardChart");
-    // this.ctx = this.canvas.getContext("2d");
-    //
-    // this.gradientStroke = this.ctx.createLinearGradient(500, 0, 100, 0);
-    // this.gradientStroke.addColorStop(0, "#80b6f4");
-    // this.gradientStroke.addColorStop(1, this.chartColor);
-    //
-    // this.gradientFill = this.ctx.createLinearGradient(0, 200, 0, 50);
-    // this.gradientFill.addColorStop(0, "rgba(128, 182, 244, 0)");
-    // this.gradientFill.addColorStop(1, "rgba(255, 255, 255, 0.24)");
-    //
-    // this.lineBigDashboardChartData = [
-    //   {
-    //     label: "Data",
-    //
-    //     pointBorderWidth: 1,
-    //     pointHoverRadius: 7,
-    //     pointHoverBorderWidth: 2,
-    //     pointRadius: 5,
-    //     fill: true,
-    //
-    //     borderWidth: 2,
-    //     data: [50, 150, 100, 190, 130, 90, 150, 160, 120, 140, 190, 95]
-    //   }
-    // ];
-    // this.lineBigDashboardChartColors = [
-    //   {
-    //     backgroundColor: this.gradientFill,
-    //     borderColor: this.chartColor,
-    //     pointBorderColor: this.chartColor,
-    //     pointBackgroundColor: "#2c2c2c",
-    //     pointHoverBackgroundColor: "#2c2c2c",
-    //     pointHoverBorderColor: this.chartColor
-    //   }
-    // ];
-    // this.lineBigDashboardChartLabels = [
-    //   "JAN",
-    //   "FEB",
-    //   "MAR",
-    //   "APR",
-    //   "MAY",
-    //   "JUN",
-    //   "JUL",
-    //   "AUG",
-    //   "SEP",
-    //   "OCT",
-    //   "NOV",
-    //   "DEC"
-    // ];
-    // this.lineBigDashboardChartOptions = {
-    //   layout: {
-    //     padding: {
-    //       left: 20,
-    //       right: 20,
-    //       top: 0,
-    //       bottom: 0
-    //     }
-    //   },
-    //   maintainAspectRatio: false,
-    //   tooltips: {
-    //     backgroundColor: "#fff",
-    //     titleFontColor: "#333",
-    //     bodyFontColor: "#666",
-    //     bodySpacing: 4,
-    //     xPadding: 12,
-    //     mode: "nearest",
-    //     intersect: 0,
-    //     position: "nearest"
-    //   },
-    //   legend: {
-    //     position: "bottom",
-    //     fillStyle: "#FFF",
-    //     display: false
-    //   },
-    //   scales: {
-    //     yAxes: [
-    //       {
-    //         ticks: {
-    //           fontColor: "rgba(255,255,255,0.4)",
-    //           fontStyle: "bold",
-    //           beginAtZero: true,
-    //           maxTicksLimit: 5,
-    //           padding: 10
-    //         },
-    //         gridLines: {
-    //           drawTicks: true,
-    //           drawBorder: false,
-    //           display: true,
-    //           color: "rgba(255,255,255,0.1)",
-    //           zeroLineColor: "transparent"
-    //         }
-    //       }
-    //     ],
-    //     xAxes: [
-    //       {
-    //         gridLines: {
-    //           zeroLineColor: "transparent",
-    //           display: false
-    //         },
-    //         ticks: {
-    //           padding: 10,
-    //           fontColor: "rgba(255,255,255,0.4)",
-    //           fontStyle: "bold"
-    //         }
-    //       }
-    //     ]
-    //   }
-    // };
-    //
-    // this.lineBigDashboardChartType = "line";
-    //
-    // this.canvas = document.getElementById("lineChartExample");
-    // this.ctx = this.canvas.getContext("2d");
-    //
-    // this.gradientStroke = this.ctx.createLinearGradient(500, 0, 100, 0);
-    // this.gradientStroke.addColorStop(0, "#80b6f4");
-    // this.gradientStroke.addColorStop(1, this.chartColor);
-    //
-    // this.gradientFill = this.ctx.createLinearGradient(0, 170, 0, 50);
-    // this.gradientFill.addColorStop(0, "rgba(128, 182, 244, 0)");
-    // this.gradientFill.addColorStop(1, "rgba(249, 99, 59, 0.40)");
-    //
-    // this.lineChartData = [
-    //   {
-    //     label: "Active Users",
-    //     pointBorderWidth: 2,
-    //     pointHoverRadius: 4,
-    //     pointHoverBorderWidth: 1,
-    //     pointRadius: 4,
-    //     fill: true,
-    //     borderWidth: 2,
-    //     data: [542, 480, 430, 550, 530, 453, 380, 434, 568, 610, 700, 630]
-    //   }
-    // ];
-    // this.lineChartColors = [
-    //   {
-    //     borderColor: "#f96332",
-    //     pointBorderColor: "#FFF",
-    //     pointBackgroundColor: "#f96332",
-    //     backgroundColor: this.gradientFill
-    //   }
-    // ];
-    // this.lineChartLabels = [
-    //   "Jan",
-    //   "Feb",
-    //   "Mar",
-    //   "Apr",
-    //   "May",
-    //   "Jun",
-    //   "Jul",
-    //   "Aug",
-    //   "Sep",
-    //   "Oct",
-    //   "Nov",
-    //   "Dec"
-    // ];
-    // this.lineChartOptions = this.gradientChartOptionsConfiguration;
-    //
-    // this.lineChartType = "line";
-    //
-    // this.canvas = document.getElementById("lineChartExampleWithNumbersAndGrid");
-    // this.ctx = this.canvas.getContext("2d");
-    //
-    // this.gradientStroke = this.ctx.createLinearGradient(500, 0, 100, 0);
-    // this.gradientStroke.addColorStop(0, "#18ce0f");
-    // this.gradientStroke.addColorStop(1, this.chartColor);
-    //
-    // this.gradientFill = this.ctx.createLinearGradient(0, 170, 0, 50);
-    // this.gradientFill.addColorStop(0, "rgba(128, 182, 244, 0)");
-    // this.gradientFill.addColorStop(1, this.hexToRGB("#18ce0f", 0.4));
-    //
-    // this.lineChartWithNumbersAndGridData = [
-    //   {
-    //     label: "Email Stats",
-    //     pointBorderWidth: 2,
-    //     pointHoverRadius: 4,
-    //     pointHoverBorderWidth: 1,
-    //     pointRadius: 4,
-    //     fill: true,
-    //     borderWidth: 2,
-    //     data: [40, 500, 650, 700, 1200, 1250, 1300, 1900]
-    //   }
-    // ];
-    // this.lineChartWithNumbersAndGridColors = [
-    //   {
-    //     borderColor: "#18ce0f",
-    //     pointBorderColor: "#FFF",
-    //     pointBackgroundColor: "#18ce0f",
-    //     backgroundColor: this.gradientFill
-    //   }
-    // ];
-    // this.lineChartWithNumbersAndGridLabels = [
-    //   "12pm,",
-    //   "3pm",
-    //   "6pm",
-    //   "9pm",
-    //   "12am",
-    //   "3am",
-    //   "6am",
-    //   "9am"
-    // ];
-    // this.lineChartWithNumbersAndGridOptions = this.gradientChartOptionsConfiguration;
-    //
-    // this.lineChartWithNumbersAndGridType = "line";
-    //
-    // this.canvas = document.getElementById("activeCountries");
-    // this.ctx = this.canvas.getContext("2d");
-    //
-    // this.gradientFill = this.ctx.createLinearGradient(0, 170, 0, 50);
-    // this.gradientFill.addColorStop(0, "rgba(128, 182, 244, 0)");
-    // this.gradientFill.addColorStop(1, this.hexToRGB("#2CA8FF", 0.6));
-    //
-    // this.lineChartGradientsNumbersData = [
-    //   {
-    //     label: "Active Countries",
-    //     pointBorderWidth: 2,
-    //     pointHoverRadius: 4,
-    //     pointHoverBorderWidth: 1,
-    //     pointRadius: 4,
-    //     fill: true,
-    //     borderWidth: 1,
-    //     data: [80, 78, 86, 96, 83, 85, 76, 75, 88, 90]
-    //   }
-    // ];
-    // this.lineChartGradientsNumbersColors = [
-    //   {
-    //     backgroundColor: this.gradientFill,
-    //     borderColor: "#2CA8FF",
-    //     pointBorderColor: "#FFF",
-    //     pointBackgroundColor: "#2CA8FF"
-    //   }
-    // ];
-    // this.lineChartGradientsNumbersLabels = [
-    //   "January",
-    //   "February",
-    //   "March",
-    //   "April",
-    //   "May",
-    //   "June",
-    //   "July",
-    //   "August",
-    //   "September",
-    //   "October"
-    // ];
-    // this.lineChartGradientsNumbersOptions = this.gradientChartOptionsConfiguration;
-    //
-    // this.lineChartGradientsNumbersType = "line";
+  }
+  minimizeLeftSidebar(){
+      this.miscLeft.sidebarLeft_mini_active = this.miscLeft.sidebarLeft_mini_active !== true;
+  }
+  minimizeRightSidebar(){
+      this.miscRight.sidebarRight_mini_active = this.miscRight.sidebarRight_mini_active !== true;
+  }
+  entriesChange($event){
+      this.entries = $event.target.value;
+  }
+  filterTable($event) {
+      let val = $event.target.value;
+      this.temp = this.rows.filter(function(d) {
+
+          for(var key in d){
+              if(d[key].toLowerCase().indexOf(val) !== -1){
+                  return true;
+              }
+          }
+          return false;
+      });
+  }
+  onActivate(event) {
+      this.activeRow = event.row;
   }
 }

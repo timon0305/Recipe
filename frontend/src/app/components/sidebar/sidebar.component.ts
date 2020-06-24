@@ -153,7 +153,7 @@ export class SidebarComponent implements OnInit {
     event.preventDefault();
     event.stopPropagation();
     this.sleep(10);
-    if (menuitem.isCollapsing === undefined) {
+    if (menuitem.isCollapsing === '') {
       menuitem.isCollapsing = true;
 
       // menuitem.isCollapsed = !menuitem.isCollapsed;
@@ -201,44 +201,44 @@ export class SidebarComponent implements OnInit {
       }
     }
   }
-  minimizeSidebar(){
-    const body = document.getElementsByTagName('body')[0];
-    if (body.classList.contains('sidebar-mini')) {
-        misc.sidebar_mini_active = true
-    } else {
-      misc.sidebar_mini_active = false;
-    }
-    if (misc.sidebar_mini_active === true) {
-        body.classList.remove('sidebar-mini');
-        misc.sidebar_mini_active = false;
-        this.showSidebarMessage('Sidebar mini deactivated...');
-    } else {
-            body.classList.add('sidebar-mini');
-            this.showSidebarMessage('Sidebar mini activated...');
-            misc.sidebar_mini_active = true;
-    }
+  // minimizeSidebar(){
+  //   const body = document.getElementsByTagName('body')[0];
+  //   if (body.classList.contains('sidebar-mini')) {
+  //       misc.sidebar_mini_active = true
+  //   } else {
+  //     misc.sidebar_mini_active = false;
+  //   }
+  //   if (misc.sidebar_mini_active === true) {
+  //       body.classList.remove('sidebar-mini');
+  //       misc.sidebar_mini_active = false;
+  //       this.showSidebarMessage('Sidebar mini deactivated...');
+  //   } else {
+  //           body.classList.add('sidebar-mini');
+  //           this.showSidebarMessage('Sidebar mini activated...');
+  //           misc.sidebar_mini_active = true;
+  //   }
+  //
+  //   // we simulate the window Resize so the charts will get updated in realtime.
+  //   const simulateWindowResize = setInterval(function() {
+  //       window.dispatchEvent(new Event('resize'));
+  //   }, 180);
+  //
+  //   // we stop the simulation of Window Resize after the animations are completed
+  //   setTimeout(function() {
+  //       clearInterval(simulateWindowResize);
+  //   }, 1000);
+  // }
 
-    // we simulate the window Resize so the charts will get updated in realtime.
-    const simulateWindowResize = setInterval(function() {
-        window.dispatchEvent(new Event('resize'));
-    }, 180);
-
-    // we stop the simulation of Window Resize after the animations are completed
-    setTimeout(function() {
-        clearInterval(simulateWindowResize);
-    }, 1000);
-  }
-
-  showSidebarMessage(message){
-    this.toastr.show(
-      '<span class="now-ui-icons ui-1_bell-53"></span>', message,
-      {
-        timeOut: 4000,
-        closeButton: true,
-        enableHtml: true,
-        toastClass: "alert alert-danger alert-with-icon",
-        positionClass: "toast-top-right"
-      }
-    );
-  }
+  // showSidebarMessage(message){
+  //   this.toastr.show(
+  //     '<span class="now-ui-icons ui-1_bell-53"></span>', message,
+  //     {
+  //       timeOut: 4000,
+  //       closeButton: true,
+  //       enableHtml: true,
+  //       toastClass: "alert alert-danger alert-with-icon",
+  //       positionClass: "toast-top-right"
+  //     }
+  //   );
+  // }
 }
