@@ -6,7 +6,7 @@
     word-break: break-all;
     padding: 9px;
     font-weight: bold;
-    /*float: right;*/
+    float: right;
     height: auto;
     text-transform: uppercase;
     text-align: center;
@@ -20,11 +20,17 @@
     word-break: break-all;
     padding: 9px;
     font-weight: bold;
-    float: right;
+    float: left;
     height: auto;
     text-transform: uppercase;
     text-align: center;
     border-radius: 10px 0 0 10px;
+}
+.right {
+    float: right;
+}
+.left {
+    float: left;
 }
 .leftTable{
     border: 1px solid red;

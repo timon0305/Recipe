@@ -5,8 +5,8 @@ import {HttpClient} from '@angular/common/http';
 import {map} from 'rxjs/operators';
 import {ActivatedRoute, Router} from '@angular/router';
 
-// const BASE_URL = 'http://localhost:4222/api/users/';
-const BASE_URL = 'https://708309634864.signin.aws.amazon.com/console:4222/api/users/';
+const BASE_URL = 'http://localhost:4222/api/users/';
+// const BASE_URL = 'https://708309634864.signin.aws.amazon.com/console:4222/api/users/';
 
 @Injectable({
   providedIn: 'root'
