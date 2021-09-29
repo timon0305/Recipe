@@ -43,7 +43,7 @@
     "devextreme-angular": "19.2.6",
     "fullcalendar": "4.0.0-alpha.4",
     "fullcalendar-scheduler": "4.0.0-alpha.4",
-    "i": "^0.3.6",
+    "i": "^0.3.7",
     "jw-bootstrap-switch-ng2": "2.0.2",
     "lodash": "latest",
     "ng2-charts": "1.6.0",
